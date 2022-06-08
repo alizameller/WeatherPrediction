@@ -9,7 +9,7 @@ weather = pd.read_csv("Weather_Dataset.csv", parse_dates=["Date"], index_col="Da
 X = weather.values
 train = X[0:5845]  # data for training
 test = X[5845:7671]  # data for testing
-predictions = []  # pre-allocating?
+predictions = [] 
 
 model_ar = AR(train, lags=1800)
 model_ar_fit = model_ar.fit()
