@@ -5,10 +5,9 @@ import numpy as np
 
 
 weather = pd.read_csv("Weather_Dataset.csv", parse_dates=["Date"], index_col="Date")
-# weather.plot(color='green')
-X = weather.values
-train = X[0:5845]  # data for training
-test = X[5845:7671]  # data for testing
+w = weather.values
+train = w[0:5845]  # data for training
+test = w[5845:7671]  # data for testing
 predictions = [] 
 
 model_ar = AR(train, lags=1800)
